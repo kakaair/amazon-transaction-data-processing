@@ -138,5 +138,6 @@ sales_statistics = concat_all.groupby(['dianpu','sku'])['销售净额','销售�
                                                  '包装费','其他:提款'].sum()
 
 sales_statistics.to_csv('C:/Users/Administrator/Desktop/result.csv')
+
 print('done...')
 exit(0)
