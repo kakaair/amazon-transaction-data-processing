@@ -33,7 +33,7 @@ all_data = pd.DataFrame(results_list, index=None, columns=['store', 'type', 'sku
                                                            'promotional_rebates', 'sales_tax_collected', \
                                                            'Marketplace_Facilitator_Tax', 'selling_fees', 'fba_fees', \
                                                            'other_transaction_fees', 'other', 'total'])
-#all_data.to_csv('C:/Users/Administrator/Desktop/1.csv')
+
 df = all_data.copy()
 
 # 销售量计算：type==Order,quantity的和
