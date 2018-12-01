@@ -33,7 +33,7 @@ all_data = pd.DataFrame(results_list, index=None, columns=['store', 'type', 'sku
                                                            'promotional_rebates', 'sales_tax_collected', \
                                                            'Marketplace_Facilitator_Tax', 'selling_fees', 'fba_fees', \
                                                            'other_transaction_fees', 'other', 'total'])
-
+#all_data.to_csv('C:/Users/Administrator/Desktop/1.csv')
 df = all_data.copy()
 
 # 销售量计算：type==Order,quantity的和
@@ -137,6 +137,8 @@ sales_statistics = concat_all.groupby(['store','sku'])['销售净额','销售量
                                                  '广告费用','其他_订单','其他：服务费','其他：退货','其他：清算',\
                                                  '其他：闪电交易费','其他：Debt','其他：退款','其他：FBA 库存费',\
                                                  '包装费','其他:提款'].sum()
+
+sales_statistics=sales_statistics.round(2)
 
 sales_statistics.to_csv('C:/Users/Administrator/Desktop/销售统计.csv')
 
